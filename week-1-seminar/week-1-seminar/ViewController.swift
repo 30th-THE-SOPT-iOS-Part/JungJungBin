@@ -15,8 +15,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var contentLabel: UILabel!
     @IBOutlet weak var updateBtn: UIButton!
+    @IBOutlet weak var sendBtn: UIButton!
     @IBOutlet weak var enterFirstViewBtn: UIButton!
     @IBOutlet weak var enterSecondViewBtn: UIButton!
+    @IBOutlet weak var textField: UITextField!
     
     // MARK: LifeCycle
     override func viewDidLoad() {
@@ -28,8 +30,10 @@ class ViewController: UIViewController {
     func configureUI() {
         contentLabel.text = "도착한 메시지가 없어요!"
         contentLabel.sizeToFit()
-        
-        [updateBtn, enterFirstViewBtn, enterSecondViewBtn].forEach { btn in
+        textField.layer.borderWidth = 1
+        textField.layer.borderColor = UIColor.black.cgColor
+        textField.layer.cornerRadius = 8
+        [updateBtn, enterFirstViewBtn, enterSecondViewBtn, sendBtn].forEach { btn in
             btn?.layer.borderWidth = 1
             btn?.layer.borderColor = UIColor.black.cgColor
             btn?.layer.cornerRadius = 8
@@ -55,5 +59,15 @@ class ViewController: UIViewController {
     @IBAction func tapEnterSecondViewBtn(_ sender: Any) {
         guard let secondVC = self.storyboard?.instantiateViewController(withIdentifier: SecondViewController.ID) else { return }
         self.navigationController?.pushViewController(secondVC, animated: true)
+    }
+    
+    // MARK: tapSendBtn()
+    @IBAction func tapSendBtn(_ sender: Any) {
+        guard let firstVC = self.storyboard?.instantiateViewController(withIdentifier: FirstViewController.ID) as? FirstViewController else { return }
+        
+        firstVC.modalPresentationStyle = .fullScreen
+        firstVC.message = self.textField.text
+        
+        self.present(firstVC, animated: true, completion: nil)
     }
 }

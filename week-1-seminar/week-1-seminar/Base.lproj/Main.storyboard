@@ -78,6 +78,26 @@
                                     <action selector="tapUpdateBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7g9-bN-kF7"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BDy-G5-9Nq">
+                                <rect key="frame" x="16" y="530" width="271" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vvu-p1-3fD">
+                                <rect key="frame" x="295" y="530" width="64" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="SEND">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapSendBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QN5-Sl-oPJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -87,6 +107,8 @@
                         <outlet property="contentLabel" destination="6gM-yQ-vEP" id="O8D-Pd-I6h"/>
                         <outlet property="enterFirstViewBtn" destination="TXc-0W-24M" id="QmZ-DU-yRe"/>
                         <outlet property="enterSecondViewBtn" destination="1Nj-Cv-Y3x" id="z2c-yz-baD"/>
+                        <outlet property="sendBtn" destination="vvu-p1-3fD" id="Iff-UN-6II"/>
+                        <outlet property="textField" destination="BDy-G5-9Nq" id="6JX-1V-K4k"/>
                         <outlet property="titleLabel" destination="yfT-UY-eFD" id="056-in-itY"/>
                         <outlet property="updateBtn" destination="sLx-Gd-5Pp" id="IjM-v1-MQn"/>
                     </connections>
