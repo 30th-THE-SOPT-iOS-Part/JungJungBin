@@ -13,7 +13,8 @@ class ViewController: UIViewController {
     // MARK: @IBOutlet
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var contentLabel: UILabel!
-    @IBOutlet weak var finishBtn: UIButton!
+    @IBOutlet weak var updateBtn: UIButton!
+    @IBOutlet weak var enterFirstViewBtn: UIButton!
     
     // MARK: LifeCycle
     override func viewDidLoad() {
@@ -26,13 +27,15 @@ class ViewController: UIViewController {
         contentLabel.text = "도착한 메시지가 없어요!"
         contentLabel.sizeToFit()
         
-        finishBtn.layer.borderWidth = 1
-        finishBtn.layer.borderColor = UIColor.black.cgColor
-        finishBtn.layer.cornerRadius = 8
+        [updateBtn, enterFirstViewBtn].forEach { btn in
+            btn?.layer.borderWidth = 1
+            btn?.layer.borderColor = UIColor.black.cgColor
+            btn?.layer.cornerRadius = 8
+        }
     }
     
-    // MARK: tapFinishBtn()
-    @IBAction func tapFinishBtn(_ sender: Any) {
+    // MARK: tapUpdateBtn()
+    @IBAction func tapUpdateBtn(_ sender: Any) {
         contentLabel.text = "새로운 메시지가 도착했어요! ✉️"
         contentLabel.textColor = .red
         contentLabel.sizeToFit()

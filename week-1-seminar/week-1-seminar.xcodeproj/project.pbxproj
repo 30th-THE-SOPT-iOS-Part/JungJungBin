@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C7BFDC3A27F832F2007336EC /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BFDC3927F832F2007336EC /* FirstViewController.swift */; };
+		C7BFDC3C27F8338F007336EC /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BFDC3B27F8338F007336EC /* SecondViewController.swift */; };
 		C7FBB68A27F81B1400E417C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FBB68927F81B1400E417C3 /* AppDelegate.swift */; };
 		C7FBB68C27F81B1400E417C3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FBB68B27F81B1400E417C3 /* SceneDelegate.swift */; };
 		C7FBB68E27F81B1400E417C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FBB68D27F81B1400E417C3 /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C7BFDC3927F832F2007336EC /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		C7BFDC3B27F8338F007336EC /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		C7FBB68627F81B1400E417C3 /* week-1-seminar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "week-1-seminar.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7FBB68927F81B1400E417C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C7FBB68B27F81B1400E417C3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +67,8 @@
 				C7FBB69227F81B1600E417C3 /* Assets.xcassets */,
 				C7FBB69427F81B1600E417C3 /* LaunchScreen.storyboard */,
 				C7FBB69727F81B1600E417C3 /* Info.plist */,
+				C7BFDC3927F832F2007336EC /* FirstViewController.swift */,
+				C7BFDC3B27F8338F007336EC /* SecondViewController.swift */,
 			);
 			path = "week-1-seminar";
 			sourceTree = "<group>";
@@ -141,6 +147,8 @@
 				C7FBB68E27F81B1400E417C3 /* ViewController.swift in Sources */,
 				C7FBB68A27F81B1400E417C3 /* AppDelegate.swift in Sources */,
 				C7FBB68C27F81B1400E417C3 /* SceneDelegate.swift in Sources */,
+				C7BFDC3C27F8338F007336EC /* SecondViewController.swift in Sources */,
+				C7BFDC3A27F832F2007336EC /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
