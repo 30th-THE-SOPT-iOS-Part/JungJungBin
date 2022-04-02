@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var contentLabel: UILabel!
     @IBOutlet weak var updateBtn: UIButton!
     @IBOutlet weak var enterFirstViewBtn: UIButton!
+    @IBOutlet weak var enterSecondViewBtn: UIButton!
     
     // MARK: LifeCycle
     override func viewDidLoad() {
@@ -28,7 +29,7 @@ class ViewController: UIViewController {
         contentLabel.text = "도착한 메시지가 없어요!"
         contentLabel.sizeToFit()
         
-        [updateBtn, enterFirstViewBtn].forEach { btn in
+        [updateBtn, enterFirstViewBtn, enterSecondViewBtn].forEach { btn in
             btn?.layer.borderWidth = 1
             btn?.layer.borderColor = UIColor.black.cgColor
             btn?.layer.cornerRadius = 8
@@ -48,5 +49,11 @@ class ViewController: UIViewController {
         guard let firstVC = self.storyboard?.instantiateViewController(withIdentifier: FirstViewController.ID) else { return }
         firstVC.modalPresentationStyle = .fullScreen
         self.present(firstVC, animated: true, completion: nil)
+    }
+    
+    // MARK: tapEnterSecondViewBtn()
+    @IBAction func tapEnterSecondViewBtn(_ sender: Any) {
+        guard let secondVC = self.storyboard?.instantiateViewController(withIdentifier: SecondViewController.ID) else { return }
+        self.navigationController?.pushViewController(secondVC, animated: true)
     }
 }
