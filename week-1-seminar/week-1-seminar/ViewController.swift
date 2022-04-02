@@ -6,8 +6,8 @@
 //
 
 import UIKit
+import AVFoundation
 
-@IBDesignable
 class ViewController: UIViewController {
 
     // MARK: @IBOutlet
@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var contentLabel: UILabel! {
         didSet {
             contentLabel.text = "도착한 메시지가 없어요!"
+            contentLabel.sizeToFit()
         }
     }
     @IBOutlet weak var finishBtn: UIButton! {
@@ -34,6 +35,8 @@ class ViewController: UIViewController {
     @IBAction func tapFinishBtn(_ sender: Any) {
         contentLabel.text = "새로운 메시지가 도착했어요! ✉️"
         contentLabel.textColor = .red
+        contentLabel.sizeToFit()
+        AudioServicesPlayAlertSound(SystemSoundID(1307))
     }
 }
 
