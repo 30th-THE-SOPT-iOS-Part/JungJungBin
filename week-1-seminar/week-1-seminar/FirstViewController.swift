@@ -17,4 +17,9 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    // MARK: tapBackBtn()
+    @IBAction func tapBackBtn(_ sender: Any) {
+        self.dismiss(animated: true)
+    }
 }

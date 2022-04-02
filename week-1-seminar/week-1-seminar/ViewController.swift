@@ -46,6 +46,7 @@ class ViewController: UIViewController {
     // MARK: tapEnterFirstViewBtn()
     @IBAction func tapEnterFirstViewBtn(_ sender: Any) {
         guard let firstVC = self.storyboard?.instantiateViewController(withIdentifier: FirstViewController.ID) else { return }
+        firstVC.modalPresentationStyle = .fullScreen
         self.present(firstVC, animated: true, completion: nil)
     }
 }
