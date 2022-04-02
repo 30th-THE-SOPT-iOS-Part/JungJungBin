@@ -9,7 +9,8 @@ import UIKit
 import AVFoundation
 
 class ViewController: UIViewController {
-
+    static let ID = "ViewController"
+    
     // MARK: @IBOutlet
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var contentLabel: UILabel!
