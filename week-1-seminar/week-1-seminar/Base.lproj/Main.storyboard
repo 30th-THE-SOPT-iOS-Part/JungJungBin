@@ -32,6 +32,9 @@
                                 <state key="normal" title="Enter FIRST VIEW">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="tapEnterFirstViewBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QKs-1M-GxI"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6gM-yQ-vEP">
                                 <rect key="frame" x="16" y="493" width="0.0" height="0.0"/>
@@ -152,6 +155,9 @@
                         <viewLayoutGuide key="safeArea" id="xxH-0f-Zp4"/>
                         <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
+                    <connections>
+                        <outlet property="contentLabel" destination="DRc-YK-SIc" id="SXZ-1d-hgt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cZg-Jt-2UO" sceneMemberID="firstResponder"/>
             </objects>

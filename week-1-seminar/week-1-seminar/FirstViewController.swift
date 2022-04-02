@@ -9,7 +9,11 @@ import UIKit
 
 class FirstViewController: UIViewController {
     static let ID = "FirstViewController"
-
+    
+    // MARK: @IBOutlet
+    @IBOutlet weak var contentLabel: UILabel!
+    
+    // MARK: LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
     }
