@@ -37,7 +37,9 @@ class WelcomeVC: BaseVC {
     }
     
     private func setTapCompleteBtn() {
-        
+        completeBtn.press {
+            self.dismiss(animated: true)
+        }
     }
 }
 
@@ -68,9 +70,9 @@ extension WelcomeVC {
     
     private func setTitleLabel() {
         titleLabel.text =
-        """
-                \(userName)님, Instagram에
-                오신 것을 환영합니다.
-        """
+"""
+\(userName)님, Instagram에
+오신 것을 환영합니다.
+"""
     }
 }

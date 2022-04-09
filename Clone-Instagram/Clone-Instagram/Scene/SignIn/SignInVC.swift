@@ -48,6 +48,7 @@ class SignInVC: BaseVC {
         super.viewDidLoad()
         configureUI()
         setTapSignUpBtn()
+        setTapSignInBtn()
         hideNavigationBar()
     }
     
@@ -56,6 +57,16 @@ class SignInVC: BaseVC {
             let signUpUserNameVC = SignUpVC()
             signUpUserNameVC.signUpViewType = .makeUserName
             self.navigationController?.pushViewController(signUpUserNameVC, animated: true)
+        }
+    }
+    
+    private func setTapSignInBtn() {
+        signInBtn.press {
+            if let userName = self.userNameTextField.text {
+                let welcomeVC = WelcomeVC()
+                welcomeVC.userName = userName
+                self.present(welcomeVC, animated: true)
+            }
         }
     }
 }

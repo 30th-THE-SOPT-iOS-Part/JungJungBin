@@ -36,6 +36,7 @@ class SignUpVC: BaseVC {
     }
     
     var signUpViewType: SignUpViewType = .makeUserName
+    var userName = ""
     
     // MARK: LifeCycle
     override func viewDidLoad() {
@@ -56,13 +57,18 @@ class SignUpVC: BaseVC {
         nextBtn.press {
             switch self.signUpViewType {
             case .makeUserName:
-                let signUpPasswordVC = SignUpVC()
-                signUpPasswordVC.signUpViewType = .makePassword
-                self.navigationController?.pushViewController(signUpPasswordVC, animated: true)
+                if let userName = self.textField.text {
+                    let signUpPasswordVC = SignUpVC()
+                    signUpPasswordVC.signUpViewType = .makePassword
+                    signUpPasswordVC.userName = userName
+                    self.navigationController?.pushViewController(signUpPasswordVC, animated: true)
+                }
             case .makePassword:
                 let welcomeVC = WelcomeVC()
                 welcomeVC.modalPresentationStyle = .fullScreen
+                welcomeVC.userName = self.userName
                 self.present(welcomeVC, animated: true)
+                self.navigationController?.popToRootViewController(animated: true)
             }
         }
     }
