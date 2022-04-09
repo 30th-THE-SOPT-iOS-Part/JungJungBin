@@ -12,4 +12,12 @@ class BaseVC: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
     }
+    
+    func hideNavigationBar() {
+        self.navigationController?.isNavigationBarHidden = true
+    }
+    
+    func pop() {
+        self.navigationController?.popViewController(animated: true)
+    }
 }
