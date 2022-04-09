@@ -60,7 +60,9 @@ class SignUpVC: BaseVC {
                 signUpPasswordVC.signUpViewType = .makePassword
                 self.navigationController?.pushViewController(signUpPasswordVC, animated: true)
             case .makePassword:
-                let welcomeVC = BaseVC()
+                let welcomeVC = WelcomeVC()
+                welcomeVC.modalPresentationStyle = .fullScreen
+                self.present(welcomeVC, animated: true)
             }
         }
     }
