@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		C78C6DCA27FF32E400F95176 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78C6DC927FF32E400F95176 /* AppDelegate.swift */; };
 		C78C6DCC27FF32E400F95176 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78C6DCB27FF32E400F95176 /* SceneDelegate.swift */; };
-		C78C6DCE27FF32E400F95176 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78C6DCD27FF32E400F95176 /* ViewController.swift */; };
-		C78C6DD127FF32E400F95176 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C78C6DCF27FF32E400F95176 /* Main.storyboard */; };
 		C78C6DD327FF32E500F95176 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C78C6DD227FF32E500F95176 /* Assets.xcassets */; };
 		C78C6DD627FF32E500F95176 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C78C6DD427FF32E500F95176 /* LaunchScreen.storyboard */; };
+		C78C6DDE2800834400F95176 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78C6DDD2800834400F95176 /* SignInVC.swift */; };
+		C78C6E02280155DB00F95176 /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78C6E01280155DB00F95176 /* BaseVC.swift */; };
+		C7EFE4AE2801716000B2D3E0 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = C7EFE4AD2801716000B2D3E0 /* SnapKit */; };
+		C7EFE4B12801717300B2D3E0 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = C7EFE4B02801717300B2D3E0 /* Then */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C78C6DC627FF32E400F95176 /* Clone-Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Clone-Instagram.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C78C6DC927FF32E400F95176 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C78C6DCB27FF32E400F95176 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C78C6DCD27FF32E400F95176 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C78C6DD027FF32E400F95176 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C78C6DD227FF32E500F95176 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C78C6DD527FF32E500F95176 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C78C6DD727FF32E500F95176 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C78C6DDD2800834400F95176 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
+		C78C6E01280155DB00F95176 /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +33,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7EFE4AE2801716000B2D3E0 /* SnapKit in Frameworks */,
+				C7EFE4B12801717300B2D3E0 /* Then in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +60,23 @@
 		C78C6DC827FF32E400F95176 /* Clone-Instagram */ = {
 			isa = PBXGroup;
 			children = (
+				C78C6E00280155CB00F95176 /* Base */,
 				C78C6DC927FF32E400F95176 /* AppDelegate.swift */,
 				C78C6DCB27FF32E400F95176 /* SceneDelegate.swift */,
-				C78C6DCD27FF32E400F95176 /* ViewController.swift */,
-				C78C6DCF27FF32E400F95176 /* Main.storyboard */,
 				C78C6DD227FF32E500F95176 /* Assets.xcassets */,
 				C78C6DD427FF32E500F95176 /* LaunchScreen.storyboard */,
 				C78C6DD727FF32E500F95176 /* Info.plist */,
+				C78C6DDD2800834400F95176 /* SignInVC.swift */,
 			);
 			path = "Clone-Instagram";
+			sourceTree = "<group>";
+		};
+		C78C6E00280155CB00F95176 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				C78C6E01280155DB00F95176 /* BaseVC.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +95,10 @@
 			dependencies = (
 			);
 			name = "Clone-Instagram";
+			packageProductDependencies = (
+				C7EFE4AD2801716000B2D3E0 /* SnapKit */,
+				C7EFE4B02801717300B2D3E0 /* Then */,
+			);
 			productName = "Clone-Instagram";
 			productReference = C78C6DC627FF32E400F95176 /* Clone-Instagram.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +127,10 @@
 				Base,
 			);
 			mainGroup = C78C6DBD27FF32E400F95176;
+			packageReferences = (
+				C7EFE4AC2801716000B2D3E0 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				C7EFE4AF2801717300B2D3E0 /* XCRemoteSwiftPackageReference "Then" */,
+			);
 			productRefGroup = C78C6DC727FF32E400F95176 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,7 +147,6 @@
 			files = (
 				C78C6DD627FF32E500F95176 /* LaunchScreen.storyboard in Resources */,
 				C78C6DD327FF32E500F95176 /* Assets.xcassets in Resources */,
-				C78C6DD127FF32E400F95176 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +157,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C78C6DCE27FF32E400F95176 /* ViewController.swift in Sources */,
 				C78C6DCA27FF32E400F95176 /* AppDelegate.swift in Sources */,
+				C78C6DDE2800834400F95176 /* SignInVC.swift in Sources */,
 				C78C6DCC27FF32E400F95176 /* SceneDelegate.swift in Sources */,
+				C78C6E02280155DB00F95176 /* BaseVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		C78C6DCF27FF32E400F95176 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C78C6DD027FF32E400F95176 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C78C6DD427FF32E500F95176 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -292,7 +304,6 @@
 				INFOPLIST_FILE = "Clone-Instagram/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -320,7 +331,6 @@
 				INFOPLIST_FILE = "Clone-Instagram/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -358,6 +368,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C7EFE4AC2801716000B2D3E0 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		C7EFE4AF2801717300B2D3E0 /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C7EFE4AD2801716000B2D3E0 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C7EFE4AC2801716000B2D3E0 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		C7EFE4B02801717300B2D3E0 /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C7EFE4AF2801717300B2D3E0 /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C78C6DBE27FF32E400F95176 /* Project object */;
 }
