@@ -52,6 +52,18 @@ class SignUpVC: BaseVC {
         }
     }
     
+    private func setTapNextBtn() {
+        nextBtn.press {
+            switch self.signUpViewType {
+            case .makeUserName:
+                let signUpPasswordVC = SignUpVC()
+                signUpPasswordVC.signUpViewType = .makePassword
+                self.navigationController?.pushViewController(signUpPasswordVC, animated: true)
+            case .makePassword:
+                let welcomeVC = BaseVC()
+            }
+        }
+    }
 }
 
 // MARK: - UI
@@ -92,5 +104,16 @@ extension SignUpVC {
         }
     }
     
+    private func setUIForViewType() {
+        switch signUpViewType {
+        case .makeUserName:
+            titleLabel.text = "사용자 이름 만들기"
+            contentLabel.text = "새 계정에 사용할 사용자 이름을 선택하세요. 나중에 언제든지 변경할 수 있습니다."
+            textField.placeholder = "사용자 이름"
+        case .makePassword:
+            titleLabel.text = "비밀번호 만들기"
+            contentLabel.text = "비밀번호를 저장할 수 있으므로 iCloud 기기에서 로그인 정보를 입력하지 않아도 됩니다."
+            textField.placeholder = "비밀번호"
+        }
     }
 }
