@@ -96,8 +96,8 @@
 		C7EFE4B2280189EA00B2D3E0 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
-				C78C6DDD2800834400F95176 /* SignInVC.swift */,
-				C7EFE4BF2801EF7F00B2D3E0 /* SignUpVC.swift */,
+				C7EFE4C22801EFF200B2D3E0 /* SignIn */,
+				C7EFE4C32801EFF700B2D3E0 /* SignUp */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -119,6 +119,22 @@
 				C7EFE4BB2801E57600B2D3E0 /* UIButton+.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		C7EFE4C22801EFF200B2D3E0 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				C78C6DDD2800834400F95176 /* SignInVC.swift */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		C7EFE4C32801EFF700B2D3E0 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				C7EFE4BF2801EF7F00B2D3E0 /* SignUpVC.swift */,
+			);
+			path = SignUp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
