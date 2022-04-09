@@ -47,6 +47,16 @@ class SignInVC: BaseVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
+        setTapSignUpBtn()
+        hideNavigationBar()
+    }
+    
+    private func setTapSignUpBtn() {
+        signUpBtn.press {
+            let signUpUserNameVC = SignUpVC()
+            signUpUserNameVC.signUpViewType = .makeUserName
+            self.navigationController?.pushViewController(signUpUserNameVC, animated: true)
+        }
     }
 }
 
