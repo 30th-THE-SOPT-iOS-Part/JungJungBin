@@ -14,7 +14,7 @@ enum SignUpViewType {
     case makePassword
 }
 
-class SignUpVC: BaseVC {
+final class SignUpVC: BaseVC {
     
     // MARK: Properties
     private let backBtn = UIButton().then {

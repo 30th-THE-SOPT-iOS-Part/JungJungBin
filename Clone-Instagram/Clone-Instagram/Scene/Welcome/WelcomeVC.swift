@@ -9,7 +9,7 @@ import UIKit
 import Then
 import SnapKit
 
-class WelcomeVC: BaseVC {
+final class WelcomeVC: BaseVC {
     
     // MARK: Properties
     private let titleLabel = UILabel().then {

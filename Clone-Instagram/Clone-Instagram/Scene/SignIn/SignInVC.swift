@@ -9,7 +9,7 @@ import UIKit
 import Then
 import SnapKit
 
-class SignInVC: BaseVC {
+final class SignInVC: BaseVC {
     
     // MARK: Properties
     private let logoImgView = UIImageView().then {
