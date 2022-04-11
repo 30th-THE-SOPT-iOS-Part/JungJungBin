@@ -79,14 +79,14 @@ extension SignInVC {
         logoImgView.snp.makeConstraints {
             $0.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(80)
             $0.leading.equalTo(view.safeAreaLayoutGuide.snp.leading).offset(40)
-            $0.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing).offset(-40)
+            $0.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing).inset(40)
             $0.height.equalTo(80)
         }
         
         userNameTextField.snp.makeConstraints {
             $0.top.equalTo(logoImgView.snp.bottom).offset(20)
             $0.leading.equalTo(view.safeAreaLayoutGuide.snp.leading).offset(20)
-            $0.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing).offset(-20)
+            $0.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing).inset(20)
             $0.height.equalTo(40)
         }
         

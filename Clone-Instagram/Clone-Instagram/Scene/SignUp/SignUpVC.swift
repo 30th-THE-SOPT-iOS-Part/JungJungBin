@@ -88,13 +88,13 @@ extension SignUpVC {
         titleLabel.snp.makeConstraints {
             $0.top.equalTo(backBtn.snp.bottom).offset(20)
             $0.leading.equalTo(view.safeAreaLayoutGuide.snp.leading).offset(20)
-            $0.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing).offset(-20)
+            $0.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing).inset(20)
         }
         
         contentLabel.snp.makeConstraints {
             $0.top.equalTo(titleLabel.snp.bottom).offset(16)
             $0.leading.equalTo(titleLabel.snp.leading).offset(40)
-            $0.trailing.equalTo(titleLabel.snp.trailing).offset(-40)
+            $0.trailing.equalTo(titleLabel.snp.trailing).inset(40)
         }
         
         textField.snp.makeConstraints {
