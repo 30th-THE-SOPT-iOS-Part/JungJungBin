@@ -53,19 +53,19 @@ final class SignInVC: BaseVC {
     }
     
     private func setTapSignUpBtn() {
-        signUpBtn.press {
+        signUpBtn.press { [weak self] in
             let signUpUserNameVC = SignUpVC()
             signUpUserNameVC.signUpViewType = .makeUserName
-            self.navigationController?.pushViewController(signUpUserNameVC, animated: true)
+            self?.navigationController?.pushViewController(signUpUserNameVC, animated: true)
         }
     }
     
     private func setTapSignInBtn() {
-        signInBtn.press {
-            if let userName = self.userNameTextField.text {
+        signInBtn.press { [weak self] in
+            if let userName = self?.userNameTextField.text {
                 let welcomeVC = WelcomeVC()
                 welcomeVC.userName = userName
-                self.present(welcomeVC, animated: true)
+                self?.present(welcomeVC, animated: true)
             }
         }
     }

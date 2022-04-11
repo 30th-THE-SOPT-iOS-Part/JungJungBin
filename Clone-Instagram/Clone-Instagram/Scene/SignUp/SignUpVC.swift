@@ -48,27 +48,29 @@ final class SignUpVC: BaseVC {
     }
     
     private func setTapBackBtn() {
-        backBtn.press {
-            self.pop()
+        backBtn.press { [weak self] in
+            self?.pop()
         }
     }
     
     private func setTapNextBtn() {
-        nextBtn.press {
-            switch self.signUpViewType {
+        nextBtn.press { [weak self] in
+            switch self?.signUpViewType {
             case .makeUserName:
-                if let userName = self.textField.text {
+                if let userName = self?.textField.text {
                     let signUpPasswordVC = SignUpVC()
                     signUpPasswordVC.signUpViewType = .makePassword
                     signUpPasswordVC.userName = userName
-                    self.navigationController?.pushViewController(signUpPasswordVC, animated: true)
+                    self?.navigationController?.pushViewController(signUpPasswordVC, animated: true)
                 }
             case .makePassword:
                 let welcomeVC = WelcomeVC()
                 welcomeVC.modalPresentationStyle = .fullScreen
-                welcomeVC.userName = self.userName
-                self.present(welcomeVC, animated: true)
-                self.navigationController?.popToRootViewController(animated: true)
+                welcomeVC.userName = self?.userName ?? ""
+                self?.present(welcomeVC, animated: true)
+                self?.navigationController?.popToRootViewController(animated: true)
+            case .none:
+                return
             }
         }
     }

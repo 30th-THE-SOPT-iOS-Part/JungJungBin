@@ -37,8 +37,8 @@ final class WelcomeVC: BaseVC {
     }
     
     private func setTapCompleteBtn() {
-        completeBtn.press {
-            self.dismiss(animated: true)
+        completeBtn.press { [weak self] in
+            self?.dismiss(animated: true)
         }
     }
 }

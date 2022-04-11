@@ -8,8 +8,9 @@
 import UIKit
 
 extension UIButton {
-    func press(vibrate: Bool = false, for controlEvents: UIControl.Event = .touchUpInside, _ closure: @escaping()->()) {
-        self.addAction(UIAction { (action: UIAction) in closure()
+    func press(vibrate: Bool = false, for controlEvents: UIControl.Event = .touchUpInside, closure: @escaping ()->()) {
+        self.addAction(UIAction {
+            (action: UIAction) in closure()
         }, for: controlEvents)
     }
 }
