@@ -8,31 +8,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
-        <scene sceneID="blc-OV-O2Q">
-            <objects>
-                <viewController storyboardIdentifier="FirstViewController" id="cSf-NL-52a" customClass="FirstViewController" customModule="week_2_seminar" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="XCe-jJ-lML">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="First" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VWQ-1b-t20">
-                                <rect key="frame" x="166" y="396" width="34" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="RoO-ne-fv5"/>
-                        <color key="backgroundColor" systemColor="systemYellowColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="amw-dr-qUM"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0U4-49-d5I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-136" y="55"/>
-        </scene>
         <!--Item 1-->
         <scene sceneID="d7b-yx-zDS">
             <objects>
@@ -72,13 +47,66 @@
             </objects>
             <point key="canvasLocation" x="-1084" y="415"/>
         </scene>
+        <!--First View Controller-->
+        <scene sceneID="n0k-Et-D5T">
+            <objects>
+                <viewController storyboardIdentifier="FirstViewController" id="jDG-ym-DEf" customClass="FirstViewController" customModule="week_2_seminar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="T28-uS-PNx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="img_bg" translatesAutoresizingMaskIntoConstraints="NO" id="afi-Cq-TgT">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icn_lock" translatesAutoresizingMaskIntoConstraints="NO" id="vON-hP-lS3">
+                                <rect key="frame" x="170" y="56" width="35" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="vON-hP-lS3" secondAttribute="height" multiplier="1:1" id="mqV-ju-c2Z"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12 : 01" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jMw-r2-oh7">
+                                <rect key="frame" x="91" y="97" width="193" height="84"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="70"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4월 9일 토요일" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B10-29-aqv">
+                                <rect key="frame" x="121" y="187" width="133" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kGU-FJ-NcD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="afi-Cq-TgT" firstAttribute="leading" secondItem="kGU-FJ-NcD" secondAttribute="leading" id="79Q-py-iuQ"/>
+                            <constraint firstAttribute="bottom" secondItem="afi-Cq-TgT" secondAttribute="bottom" id="COH-9l-Ncm"/>
+                            <constraint firstItem="kGU-FJ-NcD" firstAttribute="trailing" secondItem="afi-Cq-TgT" secondAttribute="trailing" id="Cr3-61-lhC"/>
+                            <constraint firstItem="kGU-FJ-NcD" firstAttribute="trailing" secondItem="vON-hP-lS3" secondAttribute="trailing" constant="170" id="JbB-Zn-K99"/>
+                            <constraint firstItem="jMw-r2-oh7" firstAttribute="centerX" secondItem="kGU-FJ-NcD" secondAttribute="centerX" id="KPc-iB-C9h"/>
+                            <constraint firstItem="afi-Cq-TgT" firstAttribute="top" secondItem="T28-uS-PNx" secondAttribute="top" id="MsP-uS-cAH"/>
+                            <constraint firstItem="jMw-r2-oh7" firstAttribute="top" secondItem="vON-hP-lS3" secondAttribute="bottom" constant="6" id="ROQ-eA-32e"/>
+                            <constraint firstItem="B10-29-aqv" firstAttribute="top" secondItem="jMw-r2-oh7" secondAttribute="bottom" constant="6" id="RqV-tK-hWe"/>
+                            <constraint firstItem="vON-hP-lS3" firstAttribute="leading" secondItem="kGU-FJ-NcD" secondAttribute="leading" constant="170" id="STd-GE-g1f"/>
+                            <constraint firstItem="B10-29-aqv" firstAttribute="centerX" secondItem="T28-uS-PNx" secondAttribute="centerX" id="ck8-rM-otG"/>
+                            <constraint firstItem="vON-hP-lS3" firstAttribute="top" secondItem="kGU-FJ-NcD" secondAttribute="top" constant="12" id="zVV-ub-zxf"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZTz-Sz-qcE" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-137" y="39"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="icn_lock" width="36" height="36"/>
+        <image name="img_bg" width="375" height="812"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemTealColor">
             <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
