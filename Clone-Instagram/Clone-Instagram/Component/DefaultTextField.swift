@@ -18,6 +18,11 @@ class DefaultTextField: UITextField {
         setDefaultStyle()
     }
     
+    override func clearButtonRect(forBounds bounds: CGRect) -> CGRect {
+        let originalRect = super.clearButtonRect(forBounds: bounds)
+        return originalRect.offsetBy(dx: -8, dy: 0)
+    }
+    
     // MARK: Private Methods
     private func setDefaultStyle() {
         self.layer.cornerRadius = 8
