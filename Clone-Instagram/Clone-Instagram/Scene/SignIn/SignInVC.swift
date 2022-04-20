@@ -50,6 +50,8 @@ final class SignInVC: BaseVC {
         setTapSignUpBtn()
         setTapSignInBtn()
         hideNavigationBar()
+        setTextFieldDidChangeTarget(textField: userNameTextField)
+        setTextFieldDidChangeTarget(textField: passwordTextField)
     }
     
     private func setTapSignUpBtn() {
@@ -68,6 +70,15 @@ final class SignInVC: BaseVC {
                 self?.present(welcomeVC, animated: true)
             }
         }
+    }
+    
+    private func setTextFieldDidChangeTarget(textField: UITextField) {
+        textField.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: UIControl.Event.editingChanged)
+    }
+    
+    @objc
+    private func textFieldDidChange(textField: UITextField){
+        signInBtn.isEnabled = userNameTextField.hasText && passwordTextField.hasText
     }
 }
 

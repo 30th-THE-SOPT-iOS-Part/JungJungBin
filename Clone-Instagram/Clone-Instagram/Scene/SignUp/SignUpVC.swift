@@ -45,6 +45,7 @@ final class SignUpVC: BaseVC {
         setUIForViewType()
         setTapNextBtn()
         setTapBackBtn()
+        setTextFieldDidChangeTarget(textField: textField)
     }
     
     private func setTapBackBtn() {
@@ -73,6 +74,15 @@ final class SignUpVC: BaseVC {
                 return
             }
         }
+    }
+    
+    private func setTextFieldDidChangeTarget(textField: UITextField) {
+        textField.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: UIControl.Event.editingChanged)
+    }
+    
+    @objc
+    private func textFieldDidChange(textField: UITextField){
+        nextBtn.isEnabled = textField.hasText
     }
 }
 
