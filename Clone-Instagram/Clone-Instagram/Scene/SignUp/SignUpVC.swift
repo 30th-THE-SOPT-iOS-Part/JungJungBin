@@ -33,6 +33,7 @@ final class SignUpVC: BaseVC {
     private let textField = DefaultTextField()
     private let nextBtn = BlueBtnWithText().then {
         $0.setTitle("다음", for: .normal)
+        $0.isEnabled = false
     }
     
     var signUpViewType: SignUpViewType = .makeUserName

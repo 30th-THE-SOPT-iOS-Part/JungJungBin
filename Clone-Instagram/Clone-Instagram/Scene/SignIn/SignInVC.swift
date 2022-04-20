@@ -30,6 +30,7 @@ final class SignInVC: BaseVC {
     }
     private let signInBtn = BlueBtnWithText().then {
         $0.setTitle("로그인", for: .normal)
+        $0.isEnabled = false
     }
     private let noAccountLabel = UILabel().then {
         $0.text = "계정이 없으신가요?"
