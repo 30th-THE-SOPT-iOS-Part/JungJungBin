@@ -32,6 +32,5 @@ class DefaultTextField: UITextField {
         self.layer.borderWidth = 1
         self.layer.borderColor = UIColor.systemGray5.cgColor
         self.backgroundColor = .systemGray6
-        self.clearButtonMode = .whileEditing
     }
 }

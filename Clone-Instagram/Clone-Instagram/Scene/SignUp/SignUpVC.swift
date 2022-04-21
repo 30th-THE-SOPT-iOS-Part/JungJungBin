@@ -30,7 +30,9 @@ final class SignUpVC: BaseVC {
         $0.textAlignment = .center
         $0.numberOfLines = 2
     }
-    private let textField = DefaultTextField()
+    private let textField = DefaultTextField().then {
+        $0.clearButtonMode = .whileEditing
+    }
     private let nextBtn = BlueBtnWithText().then {
         $0.setTitle("다음", for: .normal)
         $0.isEnabled = false

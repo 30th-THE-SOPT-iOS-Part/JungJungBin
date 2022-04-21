@@ -18,6 +18,7 @@ final class SignInVC: BaseVC {
     }
     private let userNameTextField = DefaultTextField().then {
         $0.placeholder = "전화번호, 사용자 이름 또는 이메일"
+        $0.clearButtonMode = .whileEditing
     }
     private let passwordTextField = DefaultTextField().then {
         $0.placeholder = "비밀번호"
