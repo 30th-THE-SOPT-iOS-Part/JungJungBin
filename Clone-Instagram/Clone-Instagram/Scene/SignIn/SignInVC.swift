@@ -23,6 +23,7 @@ final class SignInVC: BaseVC {
     private let passwordTextField = DefaultTextField().then {
         $0.placeholder = "비밀번호"
     }
+    private let passwordShowBtn = TextFieldShowBtn()
     private let forgetBtn = UIButton().then {
         $0.setTitle("비밀번호를 잊으셨나요?", for: .normal)
         $0.setTitleColor(.systemBlue, for: .normal)
@@ -54,6 +55,7 @@ final class SignInVC: BaseVC {
         hideNavigationBar()
         setTextFieldDidChangeTarget(textField: userNameTextField)
         setTextFieldDidChangeTarget(textField: passwordTextField)
+        passwordShowBtn.setShowBtn(targetTextField: passwordTextField)
     }
     
     private func setTapSignUpBtn() {
@@ -87,7 +89,7 @@ final class SignInVC: BaseVC {
 // MARK: - UI
 extension SignInVC {
     private func configureUI() {
-        view.addSubviews([logoImgView, userNameTextField, passwordTextField, forgetBtn, signInBtn, noAccountLabel, signUpBtn])
+        view.addSubviews([logoImgView, userNameTextField, passwordTextField, passwordShowBtn, forgetBtn, signInBtn, noAccountLabel, signUpBtn])
         
         logoImgView.snp.makeConstraints {
             $0.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(80)
@@ -109,6 +111,8 @@ extension SignInVC {
             $0.trailing.equalTo(userNameTextField.snp.trailing)
             $0.height.equalTo(userNameTextField.snp.height)
         }
+        
+        passwordShowBtn.setConstraints(targetView: passwordTextField)
         
         forgetBtn.snp.makeConstraints {
             $0.top.equalTo(passwordTextField.snp.bottom).offset(8)
