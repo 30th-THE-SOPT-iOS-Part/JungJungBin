@@ -22,7 +22,6 @@ final class TextFieldShowBtn: UIButton {
     
     // MARK: Custom Methods
     private func setDefaultStyle() {
-        setTitle("asdfasdf", for: .normal)
         setImage(UIImage.init(systemName: "eye"), for: .normal)
         setImage(UIImage.init(systemName: "eye.slash"), for: .selected)
         tintColor = .systemGray
