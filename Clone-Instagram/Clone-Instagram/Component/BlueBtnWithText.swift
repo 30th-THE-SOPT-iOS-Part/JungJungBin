@@ -18,12 +18,18 @@ class BlueBtnWithText: UIButton {
         setDefaultStyle()
     }
     
+    override var isEnabled: Bool {
+        didSet {
+            self.backgroundColor = isEnabled ? .systemBlue : .systemBlue.withAlphaComponent(0.5)
+        }
+    }
+    
     // MARK: Private Methods
     private func setDefaultStyle() {
         self.layer.cornerRadius = 8
         self.setTitleColor(.white, for: .normal)
         self.setTitleColor(.white, for: .disabled)
         self.titleLabel?.font = UIFont.systemFont(ofSize: 12)
-        self.backgroundColor = .systemBlue
+        self.isEnabled = true
     }
 }

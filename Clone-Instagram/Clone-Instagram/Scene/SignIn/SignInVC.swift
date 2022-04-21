@@ -18,10 +18,12 @@ final class SignInVC: BaseVC {
     }
     private let userNameTextField = DefaultTextField().then {
         $0.placeholder = "전화번호, 사용자 이름 또는 이메일"
+        $0.clearButtonMode = .whileEditing
     }
     private let passwordTextField = DefaultTextField().then {
         $0.placeholder = "비밀번호"
     }
+    private let passwordShowBtn = TextFieldShowBtn()
     private let forgetBtn = UIButton().then {
         $0.setTitle("비밀번호를 잊으셨나요?", for: .normal)
         $0.setTitleColor(.systemBlue, for: .normal)
@@ -30,6 +32,7 @@ final class SignInVC: BaseVC {
     }
     private let signInBtn = BlueBtnWithText().then {
         $0.setTitle("로그인", for: .normal)
+        $0.isEnabled = false
     }
     private let noAccountLabel = UILabel().then {
         $0.text = "계정이 없으신가요?"
@@ -50,6 +53,9 @@ final class SignInVC: BaseVC {
         setTapSignUpBtn()
         setTapSignInBtn()
         hideNavigationBar()
+        setTextFieldDidChangeTarget(textField: userNameTextField)
+        setTextFieldDidChangeTarget(textField: passwordTextField)
+        passwordShowBtn.setShowBtn(targetTextField: passwordTextField)
     }
     
     private func setTapSignUpBtn() {
@@ -69,12 +75,21 @@ final class SignInVC: BaseVC {
             }
         }
     }
+    
+    private func setTextFieldDidChangeTarget(textField: UITextField) {
+        textField.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: UIControl.Event.editingChanged)
+    }
+    
+    @objc
+    private func textFieldDidChange(textField: UITextField){
+        signInBtn.isEnabled = userNameTextField.hasText && passwordTextField.hasText
+    }
 }
 
 // MARK: - UI
 extension SignInVC {
     private func configureUI() {
-        view.addSubviews([logoImgView, userNameTextField, passwordTextField, forgetBtn, signInBtn, noAccountLabel, signUpBtn])
+        view.addSubviews([logoImgView, userNameTextField, passwordTextField, passwordShowBtn, forgetBtn, signInBtn, noAccountLabel, signUpBtn])
         
         logoImgView.snp.makeConstraints {
             $0.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(80)
@@ -96,6 +111,8 @@ extension SignInVC {
             $0.trailing.equalTo(userNameTextField.snp.trailing)
             $0.height.equalTo(userNameTextField.snp.height)
         }
+        
+        passwordShowBtn.setConstraints(targetView: passwordTextField)
         
         forgetBtn.snp.makeConstraints {
             $0.top.equalTo(passwordTextField.snp.bottom).offset(8)

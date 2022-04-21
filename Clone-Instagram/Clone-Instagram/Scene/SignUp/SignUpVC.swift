@@ -30,9 +30,12 @@ final class SignUpVC: BaseVC {
         $0.textAlignment = .center
         $0.numberOfLines = 2
     }
-    private let textField = DefaultTextField()
+    private let textField = DefaultTextField().then {
+        $0.clearButtonMode = .whileEditing
+    }
     private let nextBtn = BlueBtnWithText().then {
         $0.setTitle("다음", for: .normal)
+        $0.isEnabled = false
     }
     
     var signUpViewType: SignUpViewType = .makeUserName
@@ -45,6 +48,7 @@ final class SignUpVC: BaseVC {
         setUIForViewType()
         setTapNextBtn()
         setTapBackBtn()
+        setTextFieldDidChangeTarget(textField: textField)
     }
     
     private func setTapBackBtn() {
@@ -73,6 +77,15 @@ final class SignUpVC: BaseVC {
                 return
             }
         }
+    }
+    
+    private func setTextFieldDidChangeTarget(textField: UITextField) {
+        textField.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: UIControl.Event.editingChanged)
+    }
+    
+    @objc
+    private func textFieldDidChange(textField: UITextField){
+        nextBtn.isEnabled = textField.hasText
     }
 }
 

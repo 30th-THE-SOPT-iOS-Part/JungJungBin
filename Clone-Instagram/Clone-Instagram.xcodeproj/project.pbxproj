@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C755F2362811C4CB00373B3E /* TextFieldShowBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = C755F2352811C4CB00373B3E /* TextFieldShowBtn.swift */; };
 		C78C6DCA27FF32E400F95176 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78C6DC927FF32E400F95176 /* AppDelegate.swift */; };
 		C78C6DCC27FF32E400F95176 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78C6DCB27FF32E400F95176 /* SceneDelegate.swift */; };
 		C78C6DD327FF32E500F95176 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C78C6DD227FF32E500F95176 /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C755F2352811C4CB00373B3E /* TextFieldShowBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldShowBtn.swift; sourceTree = "<group>"; };
 		C78C6DC627FF32E400F95176 /* Clone-Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Clone-Instagram.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C78C6DC927FF32E400F95176 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C78C6DCB27FF32E400F95176 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 			children = (
 				C7EFE4B42801DD8400B2D3E0 /* DefaultTextField.swift */,
 				C7EFE4BD2801E63D00B2D3E0 /* BlueBtnWithText.swift */,
+				C755F2352811C4CB00373B3E /* TextFieldShowBtn.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 				C7EFE4B52801DD8400B2D3E0 /* DefaultTextField.swift in Sources */,
 				C7EFE4BE2801E63D00B2D3E0 /* BlueBtnWithText.swift in Sources */,
 				C78C6E02280155DB00F95176 /* BaseVC.swift in Sources */,
+				C755F2362811C4CB00373B3E /* TextFieldShowBtn.swift in Sources */,
 				C7EFE4C92801F64600B2D3E0 /* BaseNC.swift in Sources */,
 				C7EFE4C02801EF7F00B2D3E0 /* SignUpVC.swift in Sources */,
 				C7EFE4BC2801E57600B2D3E0 /* UIButton+.swift in Sources */,
