@@ -72,6 +72,7 @@ final class SignInVC: BaseVC {
             if let userName = self?.userNameTextField.text {
                 let welcomeVC = WelcomeVC()
                 welcomeVC.userName = userName
+                welcomeVC.modalPresentationStyle = .fullScreen
                 self?.present(welcomeVC, animated: true)
             }
         }
