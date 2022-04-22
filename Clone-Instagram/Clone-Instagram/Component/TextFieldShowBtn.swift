@@ -39,7 +39,7 @@ final class TextFieldShowBtn: UIButton {
     func setShowBtn(targetTextField: UITextField) {
         press {
             self.isSelected.toggle()
-            targetTextField.isSecureTextEntry = self.isSelected
+            targetTextField.isSecureTextEntry = !(self.isSelected)
         }
     }
 }

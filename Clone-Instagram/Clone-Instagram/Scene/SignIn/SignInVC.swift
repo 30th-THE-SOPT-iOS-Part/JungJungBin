@@ -22,6 +22,7 @@ final class SignInVC: BaseVC {
     }
     private let passwordTextField = DefaultTextField().then {
         $0.placeholder = "비밀번호"
+        $0.isSecureTextEntry = true
     }
     private let passwordShowBtn = TextFieldShowBtn()
     private let forgetBtn = UIButton().then {
