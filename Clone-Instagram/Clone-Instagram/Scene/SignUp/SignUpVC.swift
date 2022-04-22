@@ -102,8 +102,8 @@ extension SignUpVC {
         
         titleLabel.snp.makeConstraints {
             $0.top.equalTo(backBtn.snp.bottom).offset(20)
-            $0.leading.equalTo(view.safeAreaLayoutGuide.snp.leading).offset(20)
-            $0.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing).inset(20)
+            $0.leading.equalTo(view.safeAreaLayoutGuide.snp.leading).offset(16)
+            $0.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing).inset(16)
         }
         
         contentLabel.snp.makeConstraints {
@@ -113,7 +113,7 @@ extension SignUpVC {
         }
         
         textField.snp.makeConstraints {
-            $0.top.equalTo(contentLabel.snp.bottom).offset(20)
+            $0.top.equalTo(contentLabel.snp.bottom).offset(22)
             $0.leading.equalTo(titleLabel.snp.leading)
             $0.trailing.equalTo(titleLabel.snp.trailing)
             $0.height.equalTo(40)

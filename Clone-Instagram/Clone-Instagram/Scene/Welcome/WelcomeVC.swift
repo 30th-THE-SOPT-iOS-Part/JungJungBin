@@ -49,21 +49,21 @@ extension WelcomeVC {
         view.addSubviews([titleLabel, contentLabel, completeBtn])
         
         titleLabel.snp.makeConstraints {
-            $0.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(270)
-            $0.leading.equalTo(view.safeAreaLayoutGuide.snp.leading).offset(20)
-            $0.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing).inset(20)
+            $0.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(310)
+            $0.leading.equalTo(view.safeAreaLayoutGuide.snp.leading).offset(75)
+            $0.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing).inset(75)
         }
         
         contentLabel.snp.makeConstraints {
             $0.top.equalTo(titleLabel.snp.bottom).offset(20)
-            $0.leading.equalTo(titleLabel.snp.leading)
-            $0.trailing.equalTo(titleLabel.snp.trailing)
+            $0.leading.equalTo(titleLabel.snp.leading).offset(-40)
+            $0.trailing.equalTo(titleLabel.snp.trailing).inset(-40)
         }
         
         completeBtn.snp.makeConstraints {
             $0.top.equalTo(contentLabel.snp.bottom).offset(20)
-            $0.leading.equalTo(titleLabel.snp.leading)
-            $0.trailing.equalTo(titleLabel.snp.trailing)
+            $0.leading.equalTo(titleLabel.snp.leading).offset(-38)
+            $0.trailing.equalTo(titleLabel.snp.trailing).inset(-38)
             $0.height.equalTo(40)
         }
     }
