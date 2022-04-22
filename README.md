@@ -3,7 +3,7 @@
 | week | content | seminar | assignment |
 |:------:|:------:|:------:|:------:|
 |week 1| Xcode 기본 사용법,Layout기초, View 화면 전환| [🗓](https://github.com/30th-THE-SOPT-iOS-Part/JungJungBin/pull/1) |[📱](https://github.com/30th-THE-SOPT-iOS-Part/JungJungBin/pull/6) |
-|week 2| AutoLayout, StackView, TabBarController | [🗓](https://github.com/30th-THE-SOPT-iOS-Part/JungJungBin/pull/7) | |
+|week 2| AutoLayout, StackView, TabBarController | [🗓](https://github.com/30th-THE-SOPT-iOS-Part/JungJungBin/pull/7) |[📱](https://github.com/30th-THE-SOPT-iOS-Part/JungJungBin/pull/10)|
 |week 3| ScrollView, TableView, CollectionView |  |  |
 |week 4| 서버와 클라이언트 이해, RESTful API, Alamofire를 활용한 실습 |  | |
 |week 5| 디자인 합동 세미나 |  |  |
