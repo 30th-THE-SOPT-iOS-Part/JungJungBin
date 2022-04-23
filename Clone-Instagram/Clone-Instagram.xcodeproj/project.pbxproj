@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		C755F2362811C4CB00373B3E /* TextFieldShowBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = C755F2352811C4CB00373B3E /* TextFieldShowBtn.swift */; };
+		C755F2392812DD1D00373B3E /* InstagramTBC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C755F2382812DD1D00373B3E /* InstagramTBC.swift */; };
+		C755F2402812DDB300373B3E /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C755F23F2812DDB300373B3E /* HomeVC.swift */; };
+		C755F2422812DDBD00373B3E /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C755F2412812DDBD00373B3E /* SearchVC.swift */; };
+		C755F2442812DDD100373B3E /* ReelsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C755F2432812DDD100373B3E /* ReelsVC.swift */; };
+		C755F2462812DDDE00373B3E /* ShopVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C755F2452812DDDE00373B3E /* ShopVC.swift */; };
+		C755F2482812DDE800373B3E /* MypageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C755F2472812DDE800373B3E /* MypageVC.swift */; };
 		C78C6DCA27FF32E400F95176 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78C6DC927FF32E400F95176 /* AppDelegate.swift */; };
 		C78C6DCC27FF32E400F95176 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78C6DCB27FF32E400F95176 /* SceneDelegate.swift */; };
 		C78C6DD327FF32E500F95176 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C78C6DD227FF32E500F95176 /* Assets.xcassets */; };
@@ -28,6 +34,12 @@
 
 /* Begin PBXFileReference section */
 		C755F2352811C4CB00373B3E /* TextFieldShowBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldShowBtn.swift; sourceTree = "<group>"; };
+		C755F2382812DD1D00373B3E /* InstagramTBC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramTBC.swift; sourceTree = "<group>"; };
+		C755F23F2812DDB300373B3E /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		C755F2412812DDBD00373B3E /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
+		C755F2432812DDD100373B3E /* ReelsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReelsVC.swift; sourceTree = "<group>"; };
+		C755F2452812DDDE00373B3E /* ShopVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopVC.swift; sourceTree = "<group>"; };
+		C755F2472812DDE800373B3E /* MypageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageVC.swift; sourceTree = "<group>"; };
 		C78C6DC627FF32E400F95176 /* Clone-Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Clone-Instagram.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C78C6DC927FF32E400F95176 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C78C6DCB27FF32E400F95176 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +71,59 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C755F2372812DCF500373B3E /* InstagramTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				C755F2382812DD1D00373B3E /* InstagramTBC.swift */,
+				C755F23A2812DD4F00373B3E /* Home */,
+				C755F23B2812DD5600373B3E /* Search */,
+				C755F23C2812DD5C00373B3E /* Reels */,
+				C755F23D2812DD8200373B3E /* Shop */,
+				C755F23E2812DD8700373B3E /* Mypage */,
+			);
+			path = InstagramTabBar;
+			sourceTree = "<group>";
+		};
+		C755F23A2812DD4F00373B3E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				C755F23F2812DDB300373B3E /* HomeVC.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		C755F23B2812DD5600373B3E /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				C755F2412812DDBD00373B3E /* SearchVC.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		C755F23C2812DD5C00373B3E /* Reels */ = {
+			isa = PBXGroup;
+			children = (
+				C755F2432812DDD100373B3E /* ReelsVC.swift */,
+			);
+			path = Reels;
+			sourceTree = "<group>";
+		};
+		C755F23D2812DD8200373B3E /* Shop */ = {
+			isa = PBXGroup;
+			children = (
+				C755F2452812DDDE00373B3E /* ShopVC.swift */,
+			);
+			path = Shop;
+			sourceTree = "<group>";
+		};
+		C755F23E2812DD8700373B3E /* Mypage */ = {
+			isa = PBXGroup;
+			children = (
+				C755F2472812DDE800373B3E /* MypageVC.swift */,
+			);
+			path = Mypage;
+			sourceTree = "<group>";
+		};
 		C78C6DBD27FF32E400F95176 = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +168,7 @@
 		C7EFE4B2280189EA00B2D3E0 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				C755F2372812DCF500373B3E /* InstagramTabBar */,
 				C7EFE4CA2801FCF300B2D3E0 /* Welcome */,
 				C7EFE4C22801EFF200B2D3E0 /* SignIn */,
 				C7EFE4C32801EFF700B2D3E0 /* SignUp */,
@@ -236,12 +302,18 @@
 				C78C6DDE2800834400F95176 /* SignInVC.swift in Sources */,
 				C7EFE4BA2801DF2200B2D3E0 /* UIView+.swift in Sources */,
 				C7EFE4CC2801FD0400B2D3E0 /* WelcomeVC.swift in Sources */,
+				C755F2462812DDDE00373B3E /* ShopVC.swift in Sources */,
 				C78C6DCC27FF32E400F95176 /* SceneDelegate.swift in Sources */,
 				C7EFE4B82801DDB900B2D3E0 /* UITextField+.swift in Sources */,
+				C755F2402812DDB300373B3E /* HomeVC.swift in Sources */,
+				C755F2482812DDE800373B3E /* MypageVC.swift in Sources */,
+				C755F2442812DDD100373B3E /* ReelsVC.swift in Sources */,
 				C7EFE4B52801DD8400B2D3E0 /* DefaultTextField.swift in Sources */,
+				C755F2422812DDBD00373B3E /* SearchVC.swift in Sources */,
 				C7EFE4BE2801E63D00B2D3E0 /* BlueBtnWithText.swift in Sources */,
 				C78C6E02280155DB00F95176 /* BaseVC.swift in Sources */,
 				C755F2362811C4CB00373B3E /* TextFieldShowBtn.swift in Sources */,
+				C755F2392812DD1D00373B3E /* InstagramTBC.swift in Sources */,
 				C7EFE4C92801F64600B2D3E0 /* BaseNC.swift in Sources */,
 				C7EFE4C02801EF7F00B2D3E0 /* SignUpVC.swift in Sources */,
 				C7EFE4BC2801E57600B2D3E0 /* UIButton+.swift in Sources */,

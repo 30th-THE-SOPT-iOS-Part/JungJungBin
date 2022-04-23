@@ -29,9 +29,9 @@ final class TextFieldShowBtn: UIButton {
     
     func setConstraints(targetView: UIView) {
         self.snp.makeConstraints {
-            $0.top.equalTo(targetView.snp.top).offset(8)
-            $0.trailing.equalTo(targetView.snp.trailing)
-            $0.bottom.equalTo(targetView.snp.bottom).inset(8)
+            $0.top.equalTo(targetView.snp.top).offset(12)
+            $0.trailing.equalTo(targetView.snp.trailing).inset(10)
+            $0.bottom.equalTo(targetView.snp.bottom).inset(12)
             $0.width.equalTo(targetView.snp.height)
         }
     }
@@ -39,7 +39,7 @@ final class TextFieldShowBtn: UIButton {
     func setShowBtn(targetTextField: UITextField) {
         press {
             self.isSelected.toggle()
-            targetTextField.isSecureTextEntry = self.isSelected
+            targetTextField.isSecureTextEntry = !(self.isSelected)
         }
     }
 }

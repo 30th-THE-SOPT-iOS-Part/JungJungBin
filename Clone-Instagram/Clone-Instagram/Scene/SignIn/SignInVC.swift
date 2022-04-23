@@ -22,6 +22,7 @@ final class SignInVC: BaseVC {
     }
     private let passwordTextField = DefaultTextField().then {
         $0.placeholder = "비밀번호"
+        $0.isSecureTextEntry = true
     }
     private let passwordShowBtn = TextFieldShowBtn()
     private let forgetBtn = UIButton().then {
@@ -71,6 +72,7 @@ final class SignInVC: BaseVC {
             if let userName = self?.userNameTextField.text {
                 let welcomeVC = WelcomeVC()
                 welcomeVC.userName = userName
+                welcomeVC.modalPresentationStyle = .fullScreen
                 self?.present(welcomeVC, animated: true)
             }
         }
@@ -92,21 +94,21 @@ extension SignInVC {
         view.addSubviews([logoImgView, userNameTextField, passwordTextField, passwordShowBtn, forgetBtn, signInBtn, noAccountLabel, signUpBtn])
         
         logoImgView.snp.makeConstraints {
-            $0.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(80)
-            $0.leading.equalTo(view.safeAreaLayoutGuide.snp.leading).offset(40)
-            $0.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing).inset(40)
-            $0.height.equalTo(80)
+            $0.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(170)
+            $0.leading.equalTo(view.safeAreaLayoutGuide.snp.leading).offset(100)
+            $0.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing).inset(100)
+            $0.height.equalTo(50)
         }
         
         userNameTextField.snp.makeConstraints {
-            $0.top.equalTo(logoImgView.snp.bottom).offset(20)
-            $0.leading.equalTo(view.safeAreaLayoutGuide.snp.leading).offset(20)
-            $0.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing).inset(20)
-            $0.height.equalTo(40)
+            $0.top.equalTo(logoImgView.snp.bottom).offset(33)
+            $0.leading.equalTo(view.safeAreaLayoutGuide.snp.leading).offset(16)
+            $0.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing).inset(16)
+            $0.height.equalTo(44)
         }
         
         passwordTextField.snp.makeConstraints {
-            $0.top.equalTo(userNameTextField.snp.bottom).offset(20)
+            $0.top.equalTo(userNameTextField.snp.bottom).offset(16)
             $0.leading.equalTo(userNameTextField.snp.leading)
             $0.trailing.equalTo(userNameTextField.snp.trailing)
             $0.height.equalTo(userNameTextField.snp.height)
@@ -115,21 +117,21 @@ extension SignInVC {
         passwordShowBtn.setConstraints(targetView: passwordTextField)
         
         forgetBtn.snp.makeConstraints {
-            $0.top.equalTo(passwordTextField.snp.bottom).offset(8)
+            $0.top.equalTo(passwordTextField.snp.bottom).offset(19)
             $0.width.equalTo(200)
             $0.trailing.equalTo(userNameTextField.snp.trailing)
-            $0.height.equalTo(18)
+            $0.height.equalTo(12)
         }
         
         signInBtn.snp.makeConstraints {
-            $0.top.equalTo(forgetBtn.snp.bottom).offset(20)
+            $0.top.equalTo(forgetBtn.snp.bottom).offset(32.5)
             $0.leading.equalTo(userNameTextField.snp.leading)
             $0.trailing.equalTo(userNameTextField.snp.trailing)
             $0.height.equalTo(userNameTextField.snp.height)
         }
         
         noAccountLabel.snp.makeConstraints {
-            $0.top.equalTo(signInBtn.snp.bottom).offset(20)
+            $0.top.equalTo(signInBtn.snp.bottom).offset(37.5)
             $0.leading.equalTo(view.safeAreaLayoutGuide.snp.leading).offset(120)
         }
         
