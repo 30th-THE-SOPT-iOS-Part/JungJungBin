@@ -7,9 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C73F38B12813DFC30056B3C2 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F38AF2813DFC30056B3C2 /* TableViewCell.swift */; };
+		C73F38B22813DFC30056B3C2 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C73F38B02813DFC30056B3C2 /* TableViewCell.xib */; };
+		C73F38B42813E4350056B3C2 /* MusicDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F38B32813E4350056B3C2 /* MusicDataModel.swift */; };
 		C76D0C9A2813CDB400A74720 /* PracticeDelegate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C76D0C992813CDB400A74720 /* PracticeDelegate.storyboard */; };
 		C76D0C9C2813CDC000A74720 /* PracticeDelegateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76D0C9B2813CDC000A74720 /* PracticeDelegateVC.swift */; };
 		C76D0C9E2813D7B000A74720 /* TargetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76D0C9D2813D7B000A74720 /* TargetVC.swift */; };
+		C76D0CA12813DEAC00A74720 /* TableViewVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C76D0CA02813DEAC00A74720 /* TableViewVC.storyboard */; };
+		C76D0CA32813DEB800A74720 /* TableViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76D0CA22813DEB800A74720 /* TableViewVC.swift */; };
 		C76F02832813C60E00096654 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76F02822813C60E00096654 /* AppDelegate.swift */; };
 		C76F02852813C60E00096654 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76F02842813C60E00096654 /* SceneDelegate.swift */; };
 		C76F02872813C60E00096654 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76F02862813C60E00096654 /* ViewController.swift */; };
@@ -19,9 +24,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C73F38AF2813DFC30056B3C2 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		C73F38B02813DFC30056B3C2 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		C73F38B32813E4350056B3C2 /* MusicDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicDataModel.swift; sourceTree = "<group>"; };
 		C76D0C992813CDB400A74720 /* PracticeDelegate.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PracticeDelegate.storyboard; sourceTree = "<group>"; };
 		C76D0C9B2813CDC000A74720 /* PracticeDelegateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeDelegateVC.swift; sourceTree = "<group>"; };
 		C76D0C9D2813D7B000A74720 /* TargetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetVC.swift; sourceTree = "<group>"; };
+		C76D0CA02813DEAC00A74720 /* TableViewVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TableViewVC.storyboard; sourceTree = "<group>"; };
+		C76D0CA22813DEB800A74720 /* TableViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewVC.swift; sourceTree = "<group>"; };
 		C76F027F2813C60E00096654 /* week-3-seminar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "week-3-seminar.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C76F02822813C60E00096654 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C76F02842813C60E00096654 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +63,18 @@
 			path = Delegate;
 			sourceTree = "<group>";
 		};
+		C76D0C9F2813DE8F00A74720 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				C76D0CA02813DEAC00A74720 /* TableViewVC.storyboard */,
+				C76D0CA22813DEB800A74720 /* TableViewVC.swift */,
+				C73F38AF2813DFC30056B3C2 /* TableViewCell.swift */,
+				C73F38B02813DFC30056B3C2 /* TableViewCell.xib */,
+				C73F38B32813E4350056B3C2 /* MusicDataModel.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
 		C76F02762813C60E00096654 = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +94,7 @@
 		C76F02812813C60E00096654 /* week-3-seminar */ = {
 			isa = PBXGroup;
 			children = (
+				C76D0C9F2813DE8F00A74720 /* TableView */,
 				C76D0C982813CD9700A74720 /* Delegate */,
 				C76F02822813C60E00096654 /* AppDelegate.swift */,
 				C76F02842813C60E00096654 /* SceneDelegate.swift */,
@@ -143,7 +166,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C76D0C9A2813CDB400A74720 /* PracticeDelegate.storyboard in Resources */,
+				C73F38B22813DFC30056B3C2 /* TableViewCell.xib in Resources */,
 				C76F028F2813C60F00096654 /* LaunchScreen.storyboard in Resources */,
+				C76D0CA12813DEAC00A74720 /* TableViewVC.storyboard in Resources */,
 				C76F028C2813C60F00096654 /* Assets.xcassets in Resources */,
 				C76F028A2813C60E00096654 /* Main.storyboard in Resources */,
 			);
@@ -156,10 +181,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C76D0CA32813DEB800A74720 /* TableViewVC.swift in Sources */,
 				C76F02872813C60E00096654 /* ViewController.swift in Sources */,
 				C76F02832813C60E00096654 /* AppDelegate.swift in Sources */,
+				C73F38B42813E4350056B3C2 /* MusicDataModel.swift in Sources */,
 				C76D0C9C2813CDC000A74720 /* PracticeDelegateVC.swift in Sources */,
 				C76F02852813C60E00096654 /* SceneDelegate.swift in Sources */,
+				C73F38B12813DFC30056B3C2 /* TableViewCell.swift in Sources */,
 				C76D0C9E2813D7B000A74720 /* TargetVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
