@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C76D0C9A2813CDB400A74720 /* PracticeDelegate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C76D0C992813CDB400A74720 /* PracticeDelegate.storyboard */; };
+		C76D0C9C2813CDC000A74720 /* PracticeDelegateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76D0C9B2813CDC000A74720 /* PracticeDelegateVC.swift */; };
 		C76F02832813C60E00096654 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76F02822813C60E00096654 /* AppDelegate.swift */; };
 		C76F02852813C60E00096654 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76F02842813C60E00096654 /* SceneDelegate.swift */; };
 		C76F02872813C60E00096654 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76F02862813C60E00096654 /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C76D0C992813CDB400A74720 /* PracticeDelegate.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PracticeDelegate.storyboard; sourceTree = "<group>"; };
+		C76D0C9B2813CDC000A74720 /* PracticeDelegateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeDelegateVC.swift; sourceTree = "<group>"; };
 		C76F027F2813C60E00096654 /* week-3-seminar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "week-3-seminar.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C76F02822813C60E00096654 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C76F02842813C60E00096654 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +41,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C76D0C982813CD9700A74720 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				C76D0C992813CDB400A74720 /* PracticeDelegate.storyboard */,
+				C76D0C9B2813CDC000A74720 /* PracticeDelegateVC.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
 		C76F02762813C60E00096654 = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +69,7 @@
 		C76F02812813C60E00096654 /* week-3-seminar */ = {
 			isa = PBXGroup;
 			children = (
+				C76D0C982813CD9700A74720 /* Delegate */,
 				C76F02822813C60E00096654 /* AppDelegate.swift */,
 				C76F02842813C60E00096654 /* SceneDelegate.swift */,
 				C76F02862813C60E00096654 /* ViewController.swift */,
@@ -125,6 +139,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C76D0C9A2813CDB400A74720 /* PracticeDelegate.storyboard in Resources */,
 				C76F028F2813C60F00096654 /* LaunchScreen.storyboard in Resources */,
 				C76F028C2813C60F00096654 /* Assets.xcassets in Resources */,
 				C76F028A2813C60E00096654 /* Main.storyboard in Resources */,
@@ -140,6 +155,7 @@
 			files = (
 				C76F02872813C60E00096654 /* ViewController.swift in Sources */,
 				C76F02832813C60E00096654 /* AppDelegate.swift in Sources */,
+				C76D0C9C2813CDC000A74720 /* PracticeDelegateVC.swift in Sources */,
 				C76F02852813C60E00096654 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
