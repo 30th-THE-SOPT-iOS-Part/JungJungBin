@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C76D0C9A2813CDB400A74720 /* PracticeDelegate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C76D0C992813CDB400A74720 /* PracticeDelegate.storyboard */; };
 		C76D0C9C2813CDC000A74720 /* PracticeDelegateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76D0C9B2813CDC000A74720 /* PracticeDelegateVC.swift */; };
+		C76D0C9E2813D7B000A74720 /* TargetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76D0C9D2813D7B000A74720 /* TargetVC.swift */; };
 		C76F02832813C60E00096654 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76F02822813C60E00096654 /* AppDelegate.swift */; };
 		C76F02852813C60E00096654 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76F02842813C60E00096654 /* SceneDelegate.swift */; };
 		C76F02872813C60E00096654 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76F02862813C60E00096654 /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		C76D0C992813CDB400A74720 /* PracticeDelegate.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PracticeDelegate.storyboard; sourceTree = "<group>"; };
 		C76D0C9B2813CDC000A74720 /* PracticeDelegateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeDelegateVC.swift; sourceTree = "<group>"; };
+		C76D0C9D2813D7B000A74720 /* TargetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetVC.swift; sourceTree = "<group>"; };
 		C76F027F2813C60E00096654 /* week-3-seminar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "week-3-seminar.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C76F02822813C60E00096654 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C76F02842813C60E00096654 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,6 +48,7 @@
 			children = (
 				C76D0C992813CDB400A74720 /* PracticeDelegate.storyboard */,
 				C76D0C9B2813CDC000A74720 /* PracticeDelegateVC.swift */,
+				C76D0C9D2813D7B000A74720 /* TargetVC.swift */,
 			);
 			path = Delegate;
 			sourceTree = "<group>";
@@ -157,6 +160,7 @@
 				C76F02832813C60E00096654 /* AppDelegate.swift in Sources */,
 				C76D0C9C2813CDC000A74720 /* PracticeDelegateVC.swift in Sources */,
 				C76F02852813C60E00096654 /* SceneDelegate.swift in Sources */,
+				C76D0C9E2813D7B000A74720 /* TargetVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

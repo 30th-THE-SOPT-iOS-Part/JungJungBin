@@ -8,28 +8,22 @@
 import UIKit
 
 class PracticeDelegateVC: UIViewController {
+    static let ID = "PracticeDelegateVC"
     
-    @IBOutlet weak var textField: UITextField!
-    
+    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var nextBtn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        textField.delegate = self
+    }
+    @IBAction func tapNextBtn(_ sender: Any) {
+        guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: TargetVC.ID) as? TargetVC else { return }
+        nextVC.delegate = self
+        self.navigationController?.pushViewController(nextVC, animated: true)
     }
 }
 
-extension PracticeDelegateVC: UITextFieldDelegate {
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        print("텍스트필드 편집 시작")
-    }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        print("Return 버튼 눌림")
-        textField.endEditing(true)
-        return true
-    }
-    
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        print("텍스트필드 편집 끝")
+extension PracticeDelegateVC: TargetVCDelegate {
+    func sendData(data: String) {
+        self.label.text = data
     }
 }
