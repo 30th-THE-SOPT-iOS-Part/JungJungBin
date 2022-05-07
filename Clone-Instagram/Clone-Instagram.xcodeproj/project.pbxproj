@@ -15,6 +15,8 @@
 		C755F2462812DDDE00373B3E /* ShopVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C755F2452812DDDE00373B3E /* ShopVC.swift */; };
 		C755F2482812DDE800373B3E /* MypageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C755F2472812DDE800373B3E /* MypageVC.swift */; };
 		C784C6252825608D00AB0A2A /* HomeNaviView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C784C6242825608D00AB0A2A /* HomeNaviView.swift */; };
+		C784C62928256D1400AB0A2A /* StoryCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C784C62828256D1400AB0A2A /* StoryCVC.swift */; };
+		C784C62B2825777500AB0A2A /* HomeStoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C784C62A2825777500AB0A2A /* HomeStoryModel.swift */; };
 		C78C6DCA27FF32E400F95176 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78C6DC927FF32E400F95176 /* AppDelegate.swift */; };
 		C78C6DCC27FF32E400F95176 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78C6DCB27FF32E400F95176 /* SceneDelegate.swift */; };
 		C78C6DD327FF32E500F95176 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C78C6DD227FF32E500F95176 /* Assets.xcassets */; };
@@ -42,6 +44,8 @@
 		C755F2452812DDDE00373B3E /* ShopVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopVC.swift; sourceTree = "<group>"; };
 		C755F2472812DDE800373B3E /* MypageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageVC.swift; sourceTree = "<group>"; };
 		C784C6242825608D00AB0A2A /* HomeNaviView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNaviView.swift; sourceTree = "<group>"; };
+		C784C62828256D1400AB0A2A /* StoryCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCVC.swift; sourceTree = "<group>"; };
+		C784C62A2825777500AB0A2A /* HomeStoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStoryModel.swift; sourceTree = "<group>"; };
 		C78C6DC627FF32E400F95176 /* Clone-Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Clone-Instagram.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C78C6DC927FF32E400F95176 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C78C6DCB27FF32E400F95176 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +95,8 @@
 			children = (
 				C755F23F2812DDB300373B3E /* HomeVC.swift */,
 				C784C6242825608D00AB0A2A /* HomeNaviView.swift */,
+				C784C62828256D1400AB0A2A /* StoryCVC.swift */,
+				C784C62A2825777500AB0A2A /* HomeStoryModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -309,6 +315,7 @@
 				C78C6DCC27FF32E400F95176 /* SceneDelegate.swift in Sources */,
 				C7EFE4B82801DDB900B2D3E0 /* UITextField+.swift in Sources */,
 				C755F2402812DDB300373B3E /* HomeVC.swift in Sources */,
+				C784C62928256D1400AB0A2A /* StoryCVC.swift in Sources */,
 				C755F2482812DDE800373B3E /* MypageVC.swift in Sources */,
 				C755F2442812DDD100373B3E /* ReelsVC.swift in Sources */,
 				C7EFE4B52801DD8400B2D3E0 /* DefaultTextField.swift in Sources */,
@@ -318,6 +325,7 @@
 				C755F2362811C4CB00373B3E /* TextFieldShowBtn.swift in Sources */,
 				C784C6252825608D00AB0A2A /* HomeNaviView.swift in Sources */,
 				C755F2392812DD1D00373B3E /* InstagramTBC.swift in Sources */,
+				C784C62B2825777500AB0A2A /* HomeStoryModel.swift in Sources */,
 				C7EFE4C92801F64600B2D3E0 /* BaseNC.swift in Sources */,
 				C7EFE4C02801EF7F00B2D3E0 /* SignUpVC.swift in Sources */,
 				C7EFE4BC2801E57600B2D3E0 /* UIButton+.swift in Sources */,
