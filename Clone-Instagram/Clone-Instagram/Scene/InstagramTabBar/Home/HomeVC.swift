@@ -34,12 +34,14 @@ class HomeVC: BaseVC {
         HomeStoryModelElement(profileImageName: "avatar3", userID: "user3"),
         HomeStoryModelElement(profileImageName: "avatar4", userID: "user4"),
         HomeStoryModelElement(profileImageName: "avatar5", userID: "user5"),
-        HomeStoryModelElement(profileImageName: "avatar6", userID: "user6")
+        HomeStoryModelElement(profileImageName: "avatar6", userID: "user6"),
+        HomeStoryModelElement(profileImageName: "avatar1", userID: "user7")
     ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
+        registerCell()
     }
     
     private func configureUI() {
@@ -73,6 +75,10 @@ class HomeVC: BaseVC {
             $0.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
         }
     }
+    
+    private func registerCell() {
+        self.storyCV.register(StoryCVC.self, forCellWithReuseIdentifier: StoryCVC.className)
+    }
 }
 
 extension HomeVC: UICollectionViewDataSource {
@@ -81,8 +87,7 @@ extension HomeVC: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        collectionView.dequeueReusableCell(withReuseIdentifier: <#T##String#>, for: <#T##IndexPath#>)
-        let cell = StoryCVC()
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: StoryCVC.className, for: indexPath) as! StoryCVC
         cell.setData(data: storyDummyData[indexPath.row])
         
         return cell

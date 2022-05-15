@@ -12,6 +12,7 @@ class StoryCVC: UICollectionViewCell {
     private let imageView = UIImageView()
     private let IDLabel = UILabel().then {
         $0.font = UIFont.boldSystemFont(ofSize: 10)
+        $0.textAlignment = .center
     }
     
     override init(frame: CGRect) {
