@@ -54,6 +54,7 @@ class HomeVC: BaseVC {
         
         storyCV.dataSource = self
         feedTV.dataSource = self
+        feedTV.delegate = self
         
         naviView.snp.makeConstraints {
             $0.top.equalTo(view.safeAreaLayoutGuide.snp.top)
@@ -107,7 +108,14 @@ extension HomeVC: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: FeedTVC.className, for: indexPath) as! FeedTVC
-        cell.
-        return UITableViewCell()
+        cell.setData(data: feedDummyData[indexPath.row])
+        
+        return cell
+    }
+}
+
+extension HomeVC: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 540
     }
 }
