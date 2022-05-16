@@ -19,7 +19,6 @@ class HomeVC: BaseVC {
         $0.contentInset = UIEdgeInsets.init(top: 0, left: 20, bottom: 0, right: 0)
         $0.showsHorizontalScrollIndicator = false
         $0.collectionViewLayout = layout
-        $0.backgroundColor = .yellow
     }
     private let grayLine = UIView().then {
         $0.backgroundColor = .systemGray5
@@ -36,6 +35,12 @@ class HomeVC: BaseVC {
         HomeStoryModelElement(profileImageName: "avatar5", userID: "user5"),
         HomeStoryModelElement(profileImageName: "avatar6", userID: "user6"),
         HomeStoryModelElement(profileImageName: "avatar1", userID: "user7")
+    ]
+    
+    var feedDummyData: FeedModel = [
+        FeedModelElement(profileImageName: "avatar1", userID: "user1", contentImageName: "postImage1", likeCount: 3, content: "hi", commentCount: 2),
+        FeedModelElement(profileImageName: "avatar2", userID: "user2", contentImageName: "postImage2", likeCount: 31, content: "hello", commentCount: 1),
+        FeedModelElement(profileImageName: "avatar3", userID: "user3", contentImageName: "postImage3", likeCount: 33, content: "bye", commentCount: 21)
     ]
     
     override func viewDidLoad() {
@@ -78,6 +83,7 @@ class HomeVC: BaseVC {
     
     private func registerCell() {
         self.storyCV.register(StoryCVC.self, forCellWithReuseIdentifier: StoryCVC.className)
+        self.feedTV.register(FeedTVC.self, forCellReuseIdentifier: FeedTVC.className)
     }
 }
 
@@ -96,10 +102,12 @@ extension HomeVC: UICollectionViewDataSource {
 
 extension HomeVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return feedDummyData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: FeedTVC.className, for: indexPath) as! FeedTVC
+        cell.
         return UITableViewCell()
     }
 }
