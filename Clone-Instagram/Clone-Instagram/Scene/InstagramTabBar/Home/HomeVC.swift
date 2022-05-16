@@ -16,7 +16,7 @@ class HomeVC: BaseVC {
         layout.scrollDirection = .horizontal
         
         $0.backgroundColor = .white
-        $0.contentInset = UIEdgeInsets.init(top: 0, left: 20, bottom: 0, right: 0)
+        $0.contentInset = UIEdgeInsets.init(top: 0, left: 10, bottom: 0, right: 10)
         $0.showsHorizontalScrollIndicator = false
         $0.collectionViewLayout = layout
     }
@@ -24,7 +24,8 @@ class HomeVC: BaseVC {
         $0.backgroundColor = .systemGray5
     }
     private let feedTV = UITableView().then {
-        $0.backgroundColor = .yellow
+        $0.separatorStyle = .none
+        $0.allowsSelection = false
     }
     
     var storyDummyData: HomeStoryModel = [
