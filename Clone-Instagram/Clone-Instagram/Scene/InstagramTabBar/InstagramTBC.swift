@@ -21,18 +21,20 @@ final class InstagramTBC: UITabBarController {
     }
     
     private func setTabBarController() {
-        let homeVC = HomeVC()
+        let homeNC = BaseNC(rootViewController: HomeVC())
         let searchVC = SearchVC()
         let reelsVC = ReelsVC()
         let shopVC = ShopVC()
         let mypageVC = MypageVC()
         
-        homeVC.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "icn_home"), selectedImage: UIImage(named: "icn_home_selected"))
+        homeNC.navigationBar.isHidden = true
+        
+        homeNC.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "icn_home"), selectedImage: UIImage(named: "icn_home_selected"))
         searchVC.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "icn_search"), selectedImage: UIImage(named: "icn_search_selected"))
         reelsVC.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "icn_reels"), selectedImage: UIImage(named: "icn_reels_selected"))
         shopVC.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "icn_shop"), selectedImage: UIImage(named: "icn_shop_selected"))
         mypageVC.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "icn_profile"), selectedImage: UIImage(named: "icn_profile_selected"))
         
-        setViewControllers([homeVC, searchVC, reelsVC, shopVC, mypageVC], animated: true)
+        setViewControllers([homeNC, searchVC, reelsVC, shopVC, mypageVC], animated: true)
     }
 }
