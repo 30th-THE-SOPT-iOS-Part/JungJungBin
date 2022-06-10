@@ -13,8 +13,8 @@ import Alamofire
  */
 
 enum SignService {
-    case postSignUp(name: String, email: String, password: String)
-    case postSignIn(name: String, email: String, password: String)
+    case postSignUp(body: SignBodyModel)
+    case postSignIn(body: SignBodyModel)
 }
 
 extension SignService: TargetType {
@@ -43,10 +43,10 @@ extension SignService: TargetType {
     
     var parameters: RequestParams {
         switch self {
-        case .postSignUp(let name, let email, let password):
-            return .requestBody(["name": name, "email": email, "password": password])
-        case .postSignIn(let name, let email, let password):
-            return .requestBody(["name": name, "email": email, "password": password])
+        case .postSignUp(let body):
+            return .requestBody(["name": body.name, "email": body.email, "password": body.password])
+        case .postSignIn(let body):
+            return .requestBody(["name": body.name, "email": body.email, "password": body.password])
         }
     }
 }
