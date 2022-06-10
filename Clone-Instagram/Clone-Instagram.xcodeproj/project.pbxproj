@@ -19,9 +19,9 @@
 		C76A61A528533E340071C5B6 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76A61A428533E340071C5B6 /* APIConstants.swift */; };
 		C76A61A728533E420071C5B6 /* GenericResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76A61A628533E420071C5B6 /* GenericResponse.swift */; };
 		C76A61A928533E480071C5B6 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76A61A828533E480071C5B6 /* NetworkConstants.swift */; };
-		C76A61AB28533E4F0071C5B6 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76A61AA28533E4F0071C5B6 /* HomeService.swift */; };
+		C76A61AB28533E4F0071C5B6 /* SignService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76A61AA28533E4F0071C5B6 /* SignService.swift */; };
 		C76A61AD28533E570071C5B6 /* BaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76A61AC28533E570071C5B6 /* BaseAPI.swift */; };
-		C76A61AF28533E5C0071C5B6 /* HomeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76A61AE28533E5C0071C5B6 /* HomeAPI.swift */; };
+		C76A61AF28533E5C0071C5B6 /* SignAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76A61AE28533E5C0071C5B6 /* SignAPI.swift */; };
 		C76A61B128533E640071C5B6 /* EventLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76A61B028533E640071C5B6 /* EventLogger.swift */; };
 		C76A61B4285340BA0071C5B6 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C76A61B3285340BA0071C5B6 /* Alamofire */; };
 		C784C6252825608D00AB0A2A /* HomeNaviView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C784C6242825608D00AB0A2A /* HomeNaviView.swift */; };
@@ -60,9 +60,9 @@
 		C76A61A428533E340071C5B6 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		C76A61A628533E420071C5B6 /* GenericResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericResponse.swift; sourceTree = "<group>"; };
 		C76A61A828533E480071C5B6 /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
-		C76A61AA28533E4F0071C5B6 /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
+		C76A61AA28533E4F0071C5B6 /* SignService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignService.swift; sourceTree = "<group>"; };
 		C76A61AC28533E570071C5B6 /* BaseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPI.swift; sourceTree = "<group>"; };
-		C76A61AE28533E5C0071C5B6 /* HomeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAPI.swift; sourceTree = "<group>"; };
+		C76A61AE28533E5C0071C5B6 /* SignAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignAPI.swift; sourceTree = "<group>"; };
 		C76A61B028533E640071C5B6 /* EventLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventLogger.swift; sourceTree = "<group>"; };
 		C784C6242825608D00AB0A2A /* HomeNaviView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNaviView.swift; sourceTree = "<group>"; };
 		C784C62828256D1400AB0A2A /* StoryCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCVC.swift; sourceTree = "<group>"; };
@@ -192,7 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				C76A61A828533E480071C5B6 /* NetworkConstants.swift */,
-				C76A61AA28533E4F0071C5B6 /* HomeService.swift */,
+				C76A61AA28533E4F0071C5B6 /* SignService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -201,7 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				C76A61AC28533E570071C5B6 /* BaseAPI.swift */,
-				C76A61AE28533E5C0071C5B6 /* HomeAPI.swift */,
+				C76A61AE28533E5C0071C5B6 /* SignAPI.swift */,
 			);
 			path = APIManagers;
 			sourceTree = "<group>";
@@ -404,7 +404,7 @@
 				C7EFE4B82801DDB900B2D3E0 /* UITextField+.swift in Sources */,
 				C7D8A5362832911E004CA3F9 /* FeedModel.swift in Sources */,
 				C755F2402812DDB300373B3E /* HomeVC.swift in Sources */,
-				C76A61AF28533E5C0071C5B6 /* HomeAPI.swift in Sources */,
+				C76A61AF28533E5C0071C5B6 /* SignAPI.swift in Sources */,
 				C784C62928256D1400AB0A2A /* StoryCVC.swift in Sources */,
 				C755F2482812DDE800373B3E /* MypageVC.swift in Sources */,
 				C755F2442812DDD100373B3E /* ReelsVC.swift in Sources */,
@@ -419,7 +419,7 @@
 				C76A61A728533E420071C5B6 /* GenericResponse.swift in Sources */,
 				C784C6252825608D00AB0A2A /* HomeNaviView.swift in Sources */,
 				C755F2392812DD1D00373B3E /* InstagramTBC.swift in Sources */,
-				C76A61AB28533E4F0071C5B6 /* HomeService.swift in Sources */,
+				C76A61AB28533E4F0071C5B6 /* SignService.swift in Sources */,
 				C784C62B2825777500AB0A2A /* HomeStoryModel.swift in Sources */,
 				C76A61A528533E340071C5B6 /* APIConstants.swift in Sources */,
 				C7EFE4C92801F64600B2D3E0 /* BaseNC.swift in Sources */,
