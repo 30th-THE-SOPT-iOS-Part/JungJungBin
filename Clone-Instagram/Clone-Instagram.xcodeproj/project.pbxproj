@@ -184,6 +184,7 @@
 			children = (
 				C76A61A428533E340071C5B6 /* APIConstants.swift */,
 				C76A61A628533E420071C5B6 /* GenericResponse.swift */,
+				C76A61A828533E480071C5B6 /* NetworkConstants.swift */,
 			);
 			path = APIEssentials;
 			sourceTree = "<group>";
@@ -191,7 +192,6 @@
 		C76A619E28533DAE0071C5B6 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				C76A61A828533E480071C5B6 /* NetworkConstants.swift */,
 				C76A61AA28533E4F0071C5B6 /* SignService.swift */,
 			);
 			path = Services;
