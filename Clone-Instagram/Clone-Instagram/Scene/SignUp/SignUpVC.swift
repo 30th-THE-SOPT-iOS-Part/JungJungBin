@@ -68,11 +68,13 @@ final class SignUpVC: BaseVC {
                     self?.navigationController?.pushViewController(signUpPasswordVC, animated: true)
                 }
             case .makePassword:
-                let welcomeVC = WelcomeVC()
-                welcomeVC.modalPresentationStyle = .fullScreen
-                welcomeVC.userName = self?.userName ?? ""
-                self?.present(welcomeVC, animated: true)
-                self?.navigationController?.popToRootViewController(animated: true)
+                self?.requestSignUp(body: SignBodyModel(name: self?.userName ?? "", email: self?.userName ?? "", password: self?.textField.text ?? ""), completion: { userName in
+                    let welcomeVC = WelcomeVC()
+                    welcomeVC.modalPresentationStyle = .fullScreen
+                    welcomeVC.userName = userName
+                    self?.present(welcomeVC, animated: true)
+                    self?.navigationController?.popToRootViewController(animated: true)
+                })
             case .none:
                 return
             }
@@ -86,6 +88,20 @@ final class SignUpVC: BaseVC {
     @objc
     private func textFieldDidChange(textField: UITextField){
         nextBtn.isEnabled = textField.hasText
+    }
+}
+
+// MARK: - Network
+extension SignUpVC {
+    private func requestSignUp(body: SignBodyModel, completion: @escaping (String) -> (Void)) {
+        SignAPI.shared.postSignUp(body: body) { networkResult in
+            switch networkResult {
+            case .success:
+                completion(body.name)
+            default:
+                debugPrint(networkResult)
+            }
+        }
     }
 }
 
