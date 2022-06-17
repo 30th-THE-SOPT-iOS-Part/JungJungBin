@@ -33,4 +33,20 @@ class SignAPI: BaseAPI {
             }
         }
     }
+    
+    /// [POST] 로그인
+    func postSignIn(body: SignBodyModel,
+                    completion: @escaping (NetworkResult<Any>) -> (Void)) {
+        AFmanager.request(SignService.postSignIn(body: body)).responseData { response in
+            switch response.result {
+            case .success:
+                guard let statusCode = response.response?.statusCode else { return }
+                guard let data = response.data else { return }
+                let networkResult = self.judgeStatus(by: statusCode, data, SignUpDataModel.self)
+                completion(networkResult)
+            case .failure(let err):
+                print(err.localizedDescription)
+            }
+        }
+    }
 }
