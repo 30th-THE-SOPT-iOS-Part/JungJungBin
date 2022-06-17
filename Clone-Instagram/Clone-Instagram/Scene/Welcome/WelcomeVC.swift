@@ -9,6 +9,11 @@ import UIKit
 import Then
 import SnapKit
 
+enum WelcomeViewType {
+    case fromSignUp
+    case fromSignIn
+}
+
 final class WelcomeVC: BaseVC {
     
     // MARK: Properties
@@ -31,7 +36,8 @@ final class WelcomeVC: BaseVC {
         $0.titleLabel?.font = UIFont.systemFont(ofSize: 14)
     }
     
-    var userName = ""
+    var welcomeViewType: WelcomeViewType = .fromSignIn
+    var signData: SignBodyModel?
     
     // MARK: LifeCycle
     override func viewDidLoad() {
@@ -44,15 +50,55 @@ final class WelcomeVC: BaseVC {
     
     private func setTapCompleteBtn() {
         completeBtn.press { [weak self] in
-            let tabBar = InstagramTBC()
-            tabBar.modalPresentationStyle = .fullScreen
-            self?.present(tabBar, animated: true)
+            switch self?.welcomeViewType {
+            case .fromSignUp:
+                self?.requestSignUp(body: self?.signData ?? SignBodyModel(name: "", email: "", password: ""), completion: { userName in
+                    self?.makeAlert(title: "회원가입 성공", message: "", okTitle: "확인", okAction: { alert in
+                        self?.dismiss(animated: true)
+                    })
+                })
+            case .fromSignIn:
+                self?.requestSignIn(body: self?.signData ?? SignBodyModel(name: "", email: "", password: ""), completion: { userName in
+                    self?.makeAlert(title: "로그인 성공", message: "", okTitle: "확인", okAction: { alert in
+                        let tabBar = InstagramTBC()
+                        tabBar.modalPresentationStyle = .fullScreen
+                        self?.present(tabBar, animated: true)
+                    })
+                })
+            default:
+                break
+            }
         }
     }
     
     private func setTapOtherSignInBtn() {
         otherSignInBtn.press { [weak self] in
             self?.dismiss(animated: true)
+        }
+    }
+}
+
+// MARK: - Network
+extension WelcomeVC {
+    private func requestSignUp(body: SignBodyModel, completion: @escaping (String) -> (Void)) {
+        SignAPI.shared.postSignUp(body: body) { networkResult in
+            switch networkResult {
+            case .success:
+                completion(body.name)
+            default:
+                debugPrint(networkResult)
+            }
+        }
+    }
+    
+    private func requestSignIn(body: SignBodyModel, completion: @escaping (String) -> (Void)) {
+        SignAPI.shared.postSignIn(body: body) { networkResult in
+            switch networkResult {
+            case .success:
+                completion(body.name)
+            default:
+                debugPrint(networkResult)
+            }
         }
     }
 }
@@ -92,7 +138,7 @@ extension WelcomeVC {
     private func setTitleLabel() {
         titleLabel.text =
 """
-\(userName)님, Instagram에
+\(signData?.name ?? "")님, Instagram에
 오신 것을 환영합니다.
 """
     }

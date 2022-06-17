@@ -69,8 +69,9 @@ final class SignUpVC: BaseVC {
                 }
             case .makePassword:
                 let welcomeVC = WelcomeVC()
+                welcomeVC.welcomeViewType = .fromSignUp
                 welcomeVC.modalPresentationStyle = .fullScreen
-                welcomeVC.userName = self?.userName ?? ""
+                welcomeVC.signData = SignBodyModel(name: self?.userName ?? "", email: self?.userName ?? "", password: self?.textField.text ?? "")
                 self?.present(welcomeVC, animated: true)
                 self?.navigationController?.popToRootViewController(animated: true)
             case .none:

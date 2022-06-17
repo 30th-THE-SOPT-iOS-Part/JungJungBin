@@ -69,9 +69,9 @@ final class SignInVC: BaseVC {
     
     private func setTapSignInBtn() {
         signInBtn.press { [weak self] in
-            if let userName = self?.userNameTextField.text {
+            if let userName = self?.userNameTextField.text, let password = self?.passwordTextField.text {
                 let welcomeVC = WelcomeVC()
-                welcomeVC.userName = userName
+                welcomeVC.signData = SignBodyModel(name: userName, email: userName, password: password)
                 welcomeVC.modalPresentationStyle = .fullScreen
                 self?.present(welcomeVC, animated: true)
             }
